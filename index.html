@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zee Empire | Fashion & Lifestyle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, green, white, silver);
+      color: #222;
+    }
+    header {
+      background: linear-gradient(to right, white, silver, #e0e0e0);
+      padding: 30px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header p { font-size: 16px; margin: 5px 0; }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: transparent; border: none; color: red;
+      padding: 14px 20px; font-size: 16px;
+      cursor: pointer; transition: background 0.3s;
+    }
+    nav button:hover { background: blue; color: black; }
+    .container { padding: 20px; display: none; }
+    .active { display: block; }
+    .subfolders {
+      display: flex; justify-content: center; gap: 20px;
+      margin-bottom: 20px;
+    }
+    .subfolders button {
+      padding: 10px 20px; border: none;
+      background: #666; color: white;
+      font-size: 14px; cursor: pointer; border-radius: 5px;
+    }
+    .subfolders button:hover { background: gold; color: black; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white; border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      padding: 15px; text-align: center;
+    }
+    .product img {
+      max-width: 100%; border-radius: 8px;
+      height: 250px; object-fit: cover;
+    }
+    .product h3 { font-size: 18px; margin: 10px 0 5px; }
+    .product p { margin: 5px 0; font-size: 14px; }
+    .order-btn {
+      margin-top: 10px; display: inline-block;
+      background: linear-gradient(to right, gold, silver);
+      padding: 10px 15px; border-radius: 6px;
+      text-decoration: none; color: black;
+      font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #222; color: white;
+      text-align: center; padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+    <header>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+    <img src="https://github.com/zeeempire27/.gm/blob/main/zees-logo.png?raw=true" 
+     alt="Zee Empire Logo" 
+     style="width:200px; height:auto; border-radius:10px; display:block; margin:20px auto;">
+    <div>
+      <h1 style="margin:0; font-size:36px; font-weight:bold;">Zee Empire Fashion & Lifestyle</h1>
+      <p style="font-size:16px; margin:5px 0;">Costal Road, The Gambia | WhatsApp/Wave: 2723058 | Email: zeeempire27@gmail.com</p>
+      <p style="font-size:14px; margin:0;">For websites like this contact Team Lead Lamin Ceesay at +2203491934</p>
+    </div>
+  </div>
+</header>
+<body>
+   <nav>
+    <button onclick="showCategory('About us')">About us</button>
+    <button onclick="showCategory('clothes')">Clothes</button>
+    <button onclick="showCategory('shoes')">Shoes</button>
+    <button onclick="showCategory('watches')">Watches</button>
+    <button onclick="showCategory('bags')">Bags</button>
+    <button onclick="showCategory('Tshirt')">Tshirt</button>
+    <button onclick="showCategory('vails')">Vails</button>
+    <button onclick="showCategory('Human hair')">Human hair</button>
+    <button onclick="showCategory('perfumes')">Perfumes</button>
+    <button onclick="showCategory('flowers')">Flower Bouquets</button>
+   
+  </nav>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">About Us</h2>
+      <p class="max-w-3xl mx-auto mb-6"> <strong></strong>Zainab jatta is the founder and CEO of Zee Empire, based in coastal road. We specialize in fashion design, with a strong commitment to sustainable practices. we are dedicated to empowering youth and promoting innovative approaches that enhance elegance productivity styles fashion, resilience, and long-term growth in the fashion industry.
+ </p>
+      <video width="65%" height="50%" controls autoplay muted style="border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);">
+  <source src="https://raw.githubusercontent.com/zeeempire27/.gm/main/VID-20251026-WA0018.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+        <div class="text-left">
+          <h3 class="text-2xl font-semibold mb-2 text-green-700">Mission</h3>
+          <p class="mb-4">Bringing style, quality, and confidence to your everyday life..</p>
+          <h3 class="text-2xl font-semibold mb-2 text-green-700">Vision</h3>
+          <p class="mb-4">To be The Gambia’s most loved fashion and lifestyle brand.</p>
+          <ul class="list-disc ml-6">
+            <div class="text-left">
+          <h3 class="text-2xl font-semibold mb-2 text-green-700">UNIQUE ADVANTAGE</h3>
+          <p class="mb-4">At Zee Empire our unique fashion stands out for its bold colors, rich cultural stories, and sustainable craftsmanship  blending tradition with modern style to create truly unique designs.</p>
+          </ul>
+        </div>
+         </div>
+    </div>
+      <!-- Our Designs -->
+  <section id="activities" class="py-16 bg-green-50">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Our Activities</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/kebbehssmartfarm-rgb/.co/main/IMG_20240903_102604.jpg" alt="Farm image" width="100%"> 
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Crop Production</h3>
+          <p>we produce fantastic designs for all our custers </p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Clothes -->
+  <div id="clothes" class="container">
+    <div class="subfolders">
+      <button onclick="showSubfolder('clothes-male')">Male</button>
+      <button onclick="showSubfolder('clothes-female')">Female</button>
+    </div>
+    <div id="clothes-male" class="products sub active">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0171.jpg" alt="IMG-20251027-WA0171" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <h3>Dubai Shirt</h3>
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D1500</p>
+        <a class="order-btn" href="https://wa.me/3233709">Order via WhatsApp</a>
+        </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0018.jpg" alt="IMG-20251027-WA0018" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <h3>Placeholder Shirt 2</h3>
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D1500</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+        </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0048.jpg" alt="IMG-20251027-WA0048" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <h3>Placeholder Shirt 2</h3>
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D1500</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+
+      </div>
+    </div>
+    <div id="clothes-female" class="products sub">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0167.jpg" alt="IMG-20251027-WA0167" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D2,300</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0029.jpg" alt="IMG-20251027-WA0029" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D2,300</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0033.jpg" alt="IMG-20251027-WA0033" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <p>Origin: Dubai/UAE</p>
+        <p>Price: D2,300</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+     
+      </div>
+    </div>
+  </div>
+
+  <!-- Shoes -->
+  <div id="shoes" class="container">
+    <div class="subfolders">
+      <button onclick="showSubfolder('shoes-male')">Male</button>
+      <button onclick="showSubfolder('shoes-female')">Female</button>
+    </div>
+    <div id="shoes-male" class="products sub active">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0124.jpg" alt="IMG-20251027-WA0124" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Kuwait Sneakers</h3>
+        <p>Origin: Kuwait</p>
+        <p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+        </div>
+    <div id="shoes-male" class="products sub active">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0042.jpg" alt="IMG-20251027-WA0042" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Kuwait Sneakers</h3>
+        <p>Origin: Kuwait</p>
+        <p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+     
+      </div>
+    </div>
+    <div id="shoes-female" class="products sub">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0224.jpg" alt="IMG-20251027-WA0224" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />
+        <h3>Placeholder Female Shoe 1</h3>
+        <p>Origin: Kuwait</p>
+        <p>Price: D1800</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Female Shoe 2">
+        <h3>Placeholder Female Shoe 2</h3>
+        <p>Origin: Kuwait</p>
+        <p>Price: D1800</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Watches -->
+  <div id="watches" class="container">
+    <div class="subfolders">
+      <button onclick="showSubfolder('watches-male')">Male</button>
+      <button onclick="showSubfolder('watches-female')">Female</button>
+    </div>
+    <div id="watches-male" class="products sub active">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251001-WA0017.jpg" alt="IMG-20251001-WA0017">        <h3>Rolex Classic</h3>
+        <p>Origin: Switzerland</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251001-WA0016.jpg" alt="IMG-20251001-WA0016">        <h3>Omega Speedmaster</h3>
+        <p>Origin: Switzerland</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+    <div id="watches-female" class="products sub">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251001-WA0009.jpg" alt="IMG-20251001-WA0009">        <h3>Cartier Elegant</h3>
+        <p>Origin: France</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251001-WA0008.jpg" alt="IMG-20251001-WA0008">        <h3>Chanel Premier</h3>
+        <p>Origin: France</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bags -->
+  <div id="bags" class="container">
+    <div class="subfolders">
+      <button onclick="showSubfolder('bags-male')">Male</button>
+      <button onclick="showSubfolder('bags-female')">Female</button>
+    </div>
+    <div id="bags-male" class="products sub active">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Male Bag 1">
+        <h3>Leather Backpack</h3>
+        <p>Origin: Italy</p><p>Price: D2500</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Male Bag 2">
+        <h3>Messenger Bag</h3>
+        <p>Origin: Italy</p><p>Price: D2300</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+    <div id="bags-female" class="products sub">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0221.jpg" alt="IMG-20251027-WA0221" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Handbag</h3>
+        <p>Origin: Italy</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0221.jpg" alt="IMG-20251027-WA0221" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Handbag</h3>
+        <p>Origin: Italy</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0221.jpg" alt="IMG-20251027-WA0221" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Handbag</h3>
+        <p>Origin: Italy</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0221.jpg" alt="IMG-20251027-WA0221" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Handbag</h3>
+        <p>Origin: Italy</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/zeeempire27/.gm/main/IMG-20251027-WA0222.jpg" alt="IMG-20251027-WA0222" style="max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.4);" />        <h3>Clutch/hand Bag</h3>
+        <p>Origin: Italy</p><p>Price: Not yet</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div><!-- Tshirt -->
+  <div id="Tshirt" class="container">
+    <div class="products">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0011.jpg" alt="IMG-20251002-WA0011">        <h3>Red Rose Bouquet</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0013.jpg" alt="IMG-20251002-WA0013">        <h3>Mixed Flowers</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+    
+
+  <!-- Vails -->
+  <div id="vails" class="container">
+    <div class="products">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20250925-WA0042.jpg" alt="IMG-20250925-WA0042">
+        <h3>Traditional Vail 1</h3>
+        <p>Origin: Gambia</p><p>Price: D1200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20250925-WA0040.jpg" alt="IMG-20250925-WA0040">        <h3>Traditional Vail 2</h3>
+        <p>Origin: Gambia</p><p>Price: D1800</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+    <!-- Human hair -->
+  <div id="Human hair" class="container">
+    <div class="products">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0011.jpg" alt="IMG-20251002-WA0011">        <h3>Red Rose Bouquet</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0013.jpg" alt="IMG-20251002-WA0013">        <h3>Mixed Flowers</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Perfumes -->
+  <div id="perfumes" class="container">
+    <div class="subfolders">
+      <button onclick="showSubfolder('perfumes-male')">Male</button>
+      <button onclick="showSubfolder('perfumes-female')">Female</button>
+    </div>
+    <div id="perfumes-male" class="products sub active">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Male Perfume 1">
+        <h3>Luxury Oud</h3>
+        <p>Origin: Dubai</p><p>Price: D1700</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Male Perfume 2">
+        <h3>Tom Ford Noir</h3>
+        <p>Origin: USA</p><p>Price: D2000</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+    <div id="perfumes-female" class="products sub">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Female Perfume 1">
+        <h3>Chanel No.5</h3>
+        <p>Origin: France</p><p>Price: D2500</p>
+        <a class="order-btn" href="https://wa.me/3233709">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Female Perfume 2">
+        <h3>Dior J'adore</h3>
+        <p>Origin: France</p><p>Price: D2400</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flower Bouquets -->
+  <div id="flowers" class="container">
+    <div class="products">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0011.jpg" alt="IMG-20251002-WA0011">        <h3>Red Rose Bouquet</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/forever23-gm/.co/main/IMG-20251002-WA0013.jpg" alt="IMG-20251002-WA0013">        <h3>Mixed Flowers</h3>
+        <p>Origin: Holland</p><p>Price: D1,200</p>
+        <a class="order-btn" href="https://wa.me/2723058">Order via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+    
+
+  <footer>
+    <p>&copy; Zee Empire, Costal Road - The Gambia</p>
+    <p>Contact: zeeempire27@gmail.com | WhatsApp/Wave:2723058.  For websites like this contact Lamin Ceesay at +2203491934
+  </footer>
+
+  <script>
+    function showCategory(id) {
+      document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    function showSubfolder(id) {
+      const parent = document.getElementById(id).parentNode;
+      parent.querySelectorAll('.sub').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'grid';
+    }
+    // Initialize
+    document.querySelectorAll('.container')[0].classList.add('active');
+  </script>
+</body>
+</html>
